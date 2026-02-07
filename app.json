@@ -35,7 +35,9 @@
             "page/home/index.page",
             "page/provider/index.page",
             "page/sync/index.page",
-            "page/oauth/index.page"
+            "page/oauth/index.page",
+            "page/player/index.page",
+            "page/paywall/index.page"
           ]
         }
       },

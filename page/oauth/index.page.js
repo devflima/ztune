@@ -1,7 +1,7 @@
 import * as hmUI from "@zos/ui";
 import { log as Logger } from "@zos/utils";
 import { push } from "@zos/router";
-import { loadProvider } from "../../utils/storage";
+import { loadProvider, setAuthorized } from "../../utils/storage";
 import { TITLE } from "zosLoader:./index.page.[pf].layout.js";
 
 const logger = Logger.getLogger("ztune");
@@ -20,11 +20,13 @@ Page({
 
     // Fake OAuth delay
     setTimeout(() => {
-      logger.info("OAuth success (fake)");
+        logger.info("OAuth success (fake)");
 
-      // próximo passo depois do login
-      // por enquanto só log
-      // depois pode ir pra player ou home
+        setAuthorized();
+
+        push({
+            url: "page/home/index.page",
+        });
     }, 2000);
   },
 });
