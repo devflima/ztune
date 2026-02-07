@@ -11,17 +11,22 @@ import {
 const logger = Logger.getLogger("ztune");
 
 Page({
-  onInit() {
-    logger.debug("home onInit");
+onInit() {
+  logger.debug("home onInit");
 
-    const provider = loadProvider();
+  const provider = loadProvider();
+
+  if (provider) {
+    logger.info(`Provider found (${provider}), skipping selection`);
 
     if (provider) {
-      logger.info(`Provider already selected: ${provider}`);
-    } else {
-      logger.info("No provider selected yet");
+      logger.info(`Provider found (${provider}), ready to sync`);
     }
-  },
+
+  } else {
+    logger.info("No provider found, showing home");
+  }
+},
 
   build() {
     hmUI.createWidget(hmUI.widget.TEXT, TITLE);
