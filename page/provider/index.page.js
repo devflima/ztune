@@ -1,5 +1,6 @@
 import * as hmUI from "@zos/ui";
 import { log as Logger } from "@zos/utils";
+import { saveProvider } from "../../utils/storage";
 import {
   TITLE,
   PROVIDERS,
@@ -19,9 +20,11 @@ Page({
       hmUI.createWidget(hmUI.widget.BUTTON, {
         ...btn,
         click_func: () => {
-          logger.info(`Selected provider: ${btn.provider}`);
+          saveProvider(btn.provider);
+          logger.info(`Provider saved: ${btn.provider}`);
         },
       });
     });
   },
 });
+

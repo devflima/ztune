@@ -1,6 +1,7 @@
 import * as hmUI from "@zos/ui";
 import { log as Logger } from "@zos/utils";
 import { push } from "@zos/router";
+import { loadProvider } from "../../utils/storage";
 import {
   TITLE,
   SUBTITLE,
@@ -12,6 +13,14 @@ const logger = Logger.getLogger("ztune");
 Page({
   onInit() {
     logger.debug("home onInit");
+
+    const provider = loadProvider();
+
+    if (provider) {
+      logger.info(`Provider already selected: ${provider}`);
+    } else {
+      logger.info("No provider selected yet");
+    }
   },
 
   build() {
