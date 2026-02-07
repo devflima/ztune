@@ -8,20 +8,23 @@ const logger = Logger.getLogger("ztune");
 
 Page({
   onInit() {
-    const provider = loadProvider();
-    logger.info(`Starting sync for provider: ${provider}`);
+    this.provider = loadProvider();
+    logger.info(`Starting OAuth fake for ${this.provider}`);
   },
 
   build() {
-    hmUI.createWidget(hmUI.widget.TEXT, TITLE);
+    hmUI.createWidget(
+      hmUI.widget.TEXT,
+      TITLE(this.provider)
+    );
 
-    // Fake loading
+    // Fake OAuth delay
     setTimeout(() => {
-      logger.info("Sync finished successfully");
+      logger.info("OAuth success (fake)");
 
-      push({
-        url: "page/oauth/index.page",
-      });
+      // próximo passo depois do login
+      // por enquanto só log
+      // depois pode ir pra player ou home
     }, 2000);
   },
 });

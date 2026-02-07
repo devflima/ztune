@@ -28,3 +28,9 @@ msgstr "Syncing playlists..."
 
 msgid "sync_done"
 msgstr "Playlists synced"
+
+msgid "connecting"
+msgstr "Connecting to"
+
+msgid "auth_success"
+msgstr "Authorization granted"
