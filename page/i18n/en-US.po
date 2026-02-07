@@ -1,3 +1,24 @@
 
 msgid "appName"
 msgstr "ZTune"
+
+msgid "subtitle"
+msgstr "Your music. Offline. On your wrist."
+
+msgid "connect"
+msgstr "Connect music service"
+
+msgid "choose_provider"
+msgstr "Choose your music service"
+
+msgid "spotify"
+msgstr "Spotify"
+
+msgid "deezer"
+msgstr "Deezer"
+
+msgid "ytmusic"
+msgstr "YouTube Music"
+
+msgid "amazon"
+msgstr "Amazon Music"
