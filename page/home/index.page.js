@@ -23,6 +23,10 @@ onInit() {
       logger.info(`Provider found (${provider}), ready to sync`);
     }
 
+    push({
+      url: "page/sync/index.page",
+    });
+
   } else {
     logger.info("No provider found, showing home");
   }

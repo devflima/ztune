@@ -33,7 +33,8 @@
         "page": {
           "pages": [
             "page/home/index.page",
-            "page/provider/index.page"
+            "page/provider/index.page",
+            "page/sync/index.page"
           ]
         }
       },

@@ -22,3 +22,9 @@ msgstr "YouTube Music"
 
 msgid "amazon"
 msgstr "Amazon Music"
+
+msgid "syncing"
+msgstr "Syncing playlists..."
+
+msgid "sync_done"
+msgstr "Playlists synced"
